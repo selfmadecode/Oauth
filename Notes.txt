@@ -1,0 +1,10 @@
+OAuth means open authorization protocol used for communication between applications
+
+OAuth is for Authorization (Authorize if an authenticated user should be authorize to access a resource
+OpenId is for Authentication (Login)
+
+Installed Indentity in IdentityServer
+Unchecked "Launch Browser" in IdentityServer Properties (Debug Tab)
+
+To Verify if identityserver is up, navigate to this url
+Get - https://localhost5005/.well-known/openid-configuration
