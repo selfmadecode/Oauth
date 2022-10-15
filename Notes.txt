@@ -8,3 +8,20 @@ Unchecked "Launch Browser" in IdentityServer Properties (Debug Tab)
 
 To Verify if identityserver is up, navigate to this url
 Get - https://localhost5005/.well-known/openid-configuration
+
+What are:
+Client:
+Scopes:
+Api Resources:
+Test Users:
+
+To generate an access token, navigate to:
+https://localhost:5005/connect/token which is an out of the box endpoint provided
+by identityServer to generate access token.
+Body paramenters (x-www-form-urlencoded)
+grant_type:client_credentials
+scope:productsAPI
+client_id:productClient
+client_secret:secret
+
+see config.cs
