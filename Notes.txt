@@ -25,3 +25,7 @@ client_id:productClient
 client_secret:secret
 
 see config.cs
+
+SECURING OTHER API's
+ADD support for JWT authentication
+Authorize Required endpoints
