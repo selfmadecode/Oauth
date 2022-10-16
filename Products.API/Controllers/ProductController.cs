@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 namespace Products.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]/[action]")]
     [Authorize]
-    public class WeatherForecastController : ControllerBase
+    public class ProductController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<ProductController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public ProductController(ILogger<ProductController> logger)
         {
             _logger = logger;
         }
@@ -36,6 +36,14 @@ namespace Products.API.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet]
+        //[Authorize("ClientIdPolicy")]
+        [Authorize(Policy = "ClientIdPolicy")]
+        public async Task<IActionResult> HasPolicy()
+        {
+            return Ok("Congratulation, you have this policy");
         }
     }
 }
