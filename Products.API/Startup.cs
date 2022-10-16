@@ -43,6 +43,12 @@ namespace Products.API
                             ValidateAudience = false
                         };
                     });
+
+            // Add Id policy
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("ClientIdPolicy", policy => policy.RequireClaim("client_id", "productClient", "product_mvc_client"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
