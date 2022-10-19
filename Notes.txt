@@ -3,6 +3,9 @@ OAuth means open authorization protocol used for communication between applicati
 OAuth is for Authorization (Authorize if an authenticated user should be authorize to access a resource
 OpenId is for Authentication (Login)
 
+Authentication is the process of validating a user's identity such as username or password
+Authorization is the process of validating what a user is allowed to do
+
 Installed Indentity in IdentityServer
 Unchecked "Launch Browser" in IdentityServer Properties (Debug Tab)
 
@@ -29,3 +32,11 @@ see config.cs
 SECURING OTHER API's
 ADD support for JWT authentication
 Authorize Required endpoints
+
+UPGRADING IDENTITY SERVER PROJECT
+run the code below to install identity openId UI from github on identity server
+steps:
+Opened identity server on powershell, ran the code to add UI
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/IdentityServer/IdentityServer4.Quickstart.UI/main/getmain.ps1'))
+
+repo link https://github.com/identityserver/identityserver4.quickstart.ui#quickstart-ui-for-identityserver4
