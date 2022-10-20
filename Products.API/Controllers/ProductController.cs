@@ -43,7 +43,7 @@ namespace Products.API.Controllers
         [Authorize(Policy = "ClientIdPolicy")]
         public async Task<IActionResult> HasPolicy()
         {
-            return Ok("Congratulation, you have this policy");
+            return Ok("Valid Policy");
         }
     }
 }
