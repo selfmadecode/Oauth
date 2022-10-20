@@ -13,6 +13,10 @@ namespace Products.API.Controllers
     [Authorize]
     public class IdentityController : ControllerBase
     {
+        /// <summary>
+        /// Returns user claims from user object
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
