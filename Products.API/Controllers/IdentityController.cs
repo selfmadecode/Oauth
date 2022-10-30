@@ -10,7 +10,7 @@ namespace Products.API.Controllers
     public class IdentityController : ControllerBase
     {
         /// <summary>
-        /// Returns user claims from user object
+        /// Returns user claims from user object (claimsPrincipal)
         /// </summary>
         /// <returns></returns>
         [HttpGet]
