@@ -47,7 +47,7 @@ namespace Products.API
             // Add Id policy
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("ClientIdPolicy", policy => policy.RequireClaim("client_id", "productClient", "product_mvc_client"));
+                //options.AddPolicy("ClientIdPolicy", policy => policy.RequireClaim("client_id", "productClient", "product_mvc_client"));
             });
         }
 
