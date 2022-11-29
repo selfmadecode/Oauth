@@ -13,8 +13,8 @@ namespace IdentityServer
         {
             services.AddControllersWithViews();
             services.AddIdentityServer()
-                //.AddInMemoryClients(Config.Clients)
-                //.AddInMemoryIdentityResources(Config.IdentityResources)
+                .AddInMemoryClients(Config.Clients)
+                .AddInMemoryIdentityResources(Config.IdentityResources)
                 //.AddInMemoryApiResources(Config.ApiResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
                // .AddTestUsers(Config.TestUsers)
